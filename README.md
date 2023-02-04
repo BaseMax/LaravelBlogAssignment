@@ -14,8 +14,9 @@ This project is an assignment for Laravel web framework. The goal is to create a
 ## Installation
 
 Clone the repository to your local machine
+
 ```bash
-git clone https://github.com/[your-username]/laravel-assignment.git
+git clone https://github.com/BaseMax/LaravelBlogAssignment.git
 ```
 
 Navigate to the project directory
