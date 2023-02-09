@@ -18,10 +18,13 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title text-info">{{ $blog[0] }}</h4>
+                    <p class="fs-8 text-success">writer: {{ $blog[2] }}</p>
                     <p class="card-text">
                         {{ $blog[1] . "..." }}
                     </p>
+                    <div class="">
                     <a href="#" class="btn btn-primary">More</a>
+                    </div>
                 </div>
             </div>
             <br /><br />  
@@ -30,14 +33,11 @@
         <br /><br />
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                    <a class="page-link">Previous</a>
+                <li class="page-item @if ($page_index === 1) disabled @endif">
+                    <a class="page-link" href="{{ route("main") . "/page=" }}{{ $page_index - 1 }}">Previous</a>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
+                <li class="page-item @if ($page_index === $max_page_index) disabled @endif" >
+                    <a class="page-link" href="{{ route("main") . "/page=" }}{{ $page_index + 1 }}">Next</a>
                 </li>
             </ul>
         </nav>

@@ -4,19 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class PageController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(int $page_index)
     {
         //
         return view("home", [
             "title" => "Ali Ahmadi",
-            "page_index" => 1,
+            "page_index" => $page_index,
             "max_page_index" => 4,
             "blogs" => [
                 ["title1", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis architecto tenetur, at aliquid laboriosam, eveniet facere, ratione debitis laborum perspiciatis quis nulla tempore necessitatibus voluptate distinctio incidunt iure autem error!", "ali"],
@@ -55,11 +55,9 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(string $article)
+    public function show($id)
     {
         //
-        // dd($article);
-        return view("articles/" . $article);
     }
 
     /**

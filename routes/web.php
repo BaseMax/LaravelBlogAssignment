@@ -22,3 +22,5 @@ Route::get("/login", "App\Http\Controllers\LoginController@index")->name("login"
 Route::get("/signup", "App\Http\Controllers\SignupController@index")->name("signup");
 
 Route::get("/blog/{article_title}", "App\Http\Controllers\BlogController@show")->where("article_title", "[a-zA-Z0-9-]+")->name("showArticle");
+
+Route::get("/page={page_index}", "App\Http\Controllers\PageController@index")->where("page_index", "[0-9]+");
