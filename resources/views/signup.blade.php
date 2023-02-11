@@ -59,7 +59,7 @@
                 <br />
                 <div class="d-grid gap-2">
                     <button class="btn btn-primary" type="submit">
-                        Sign in
+                        Sign up
                     </button>
                 </div>
             </form>

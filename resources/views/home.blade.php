@@ -18,7 +18,7 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title text-info">{{ $blog[0] }}</h4>
-                    <p class="fs-8 text-success">writer: {{ $blog[2] }}</p>
+                    <p class="fs-8 text-success">author: {{ $blog[2] }}</p>
                     <p class="card-text">
                         {{ $blog[1] . "..." }}
                     </p>
