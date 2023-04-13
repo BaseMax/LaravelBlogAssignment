@@ -1,10 +1,6 @@
 # Laravel Blog Assignment PHP Project
 
-Laravel Blog Assignment Project
-
-## Introduction
-
-This project is an assignment for Laravel web framework. a basic blog with user authentication and CRUD functionality.
+This project is an assignment for PHP and Laravel web framework. a basic blog with user authentication and CRUD functionality.
 
 ## Requirements
 - PHP 7.4 or higher
