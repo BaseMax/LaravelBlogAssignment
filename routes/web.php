@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Models\Article;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,3 +45,5 @@ Route::get("/about", "App\Http\Controllers\AboutController@index")->name("about"
 Route::get("/blog/{article_title}", "App\Http\Controllers\BlogController@show")->where("article_title", "[a-zA-Z0-9-]+")->name("showArticle");
 
 Route::get("/page={page_index}", "App\Http\Controllers\PageController@index")->where("page_index", "[0-9]+");
+
+Route::get("/articles/{id}", "App\Http\Controllers\ArticleController@show")->where("id", "[0-9]+")->name("article.show");
