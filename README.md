@@ -39,10 +39,7 @@ Generate an application key
 php artisan key:generate
 ```
 
-Configure the database settings in the .env file
-```
-makefile
-```
+Configure the database settings in the .env file:
 
 ```
 DB_CONNECTION=mysql
