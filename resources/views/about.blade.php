@@ -12,7 +12,7 @@
 <body>
 
 
-    @include('layout.navbar')
+    @include('layout.nav')
     <br><br><br>
     <h1 style="text-align: center">There is About page for this blog...</h1>
     @include('layout.js')

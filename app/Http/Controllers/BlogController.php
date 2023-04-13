@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -13,19 +14,25 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
         return view("home", [
-            "title" => "Ali Ahmadi",
+            "title" => "Ali Ahmadi | Blog",
+            "blogs" => Article::all(),
             "page_index" => 1,
-            "max_page_index" => 4,
-            "blogs" => [
-                ["title1", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis architecto tenetur, at aliquid laboriosam, eveniet facere, ratione debitis laborum perspiciatis quis nulla tempore necessitatibus voluptate distinctio incidunt iure autem error!", "ali"],
-                ["title2", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis architecto tenetur, at aliquid laboriosam, eveniet facere, ratione debitis laborum perspiciatis quis nulla tempore necessitatibus voluptate distinctio incidunt iure autem error!", "reza"],
-                ["title3", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis architecto tenetur, at aliquid laboriosam, eveniet facere, ratione debitis laborum perspiciatis quis nulla tempore necessitatibus voluptate distinctio incidunt iure autem error!", "hassan"],
-                ["title4", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis architecto tenetur, at aliquid laboriosam, eveniet facere, ratione debitis laborum perspiciatis quis nulla tempore necessitatibus voluptate distinctio incidunt iure autem error!", "ahmad"],
-                ["title5", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis architecto tenetur, at aliquid laboriosam, eveniet facere, ratione debitis laborum perspiciatis quis nulla tempore necessitatibus voluptate distinctio incidunt iure autem error!", "akbar"]
-            ]
+            "max_page_index" => (int) (Article::count() / 5) + 1
         ]);
+        //
+        // return view("home", [
+        //     "title" => "Ali Ahmadi",
+        //     "page_index" => 1,
+        //     "max_page_index" => 4,
+        //     "blogs" => [
+        //         ["title1", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis architecto tenetur, at aliquid laboriosam, eveniet facere, ratione debitis laborum perspiciatis quis nulla tempore necessitatibus voluptate distinctio incidunt iure autem error!", "ali"],
+        //         ["title2", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis architecto tenetur, at aliquid laboriosam, eveniet facere, ratione debitis laborum perspiciatis quis nulla tempore necessitatibus voluptate distinctio incidunt iure autem error!", "reza"],
+        //         ["title3", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis architecto tenetur, at aliquid laboriosam, eveniet facere, ratione debitis laborum perspiciatis quis nulla tempore necessitatibus voluptate distinctio incidunt iure autem error!", "hassan"],
+        //         ["title4", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis architecto tenetur, at aliquid laboriosam, eveniet facere, ratione debitis laborum perspiciatis quis nulla tempore necessitatibus voluptate distinctio incidunt iure autem error!", "ahmad"],
+        //         ["title5", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis architecto tenetur, at aliquid laboriosam, eveniet facere, ratione debitis laborum perspiciatis quis nulla tempore necessitatibus voluptate distinctio incidunt iure autem error!", "akbar"]
+        //     ]
+        // ]);
     }
 
     /**
