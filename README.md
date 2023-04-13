@@ -20,21 +20,25 @@ git clone https://github.com/BaseMax/LaravelBlogAssignment.git
 ```
 
 Navigate to the project directory
+
 ```bash
 cd LaravelBlogAssignment
 ```
 
 Install dependencies with Composer
+
 ```
 composer install
 ```
 
-Copy the .env.example file to .env
+Copy the `.env.example` file to `.env`
+
 ```bash
 cp .env.example .env
 ```
 
 Generate an application key
+
 ```
 php artisan key:generate
 ```
@@ -50,20 +54,22 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Run the migrations to create the necessary tables
+Run the migrations to create the necessary tables:
+
 ```
 php artisan migrate
 ```
 
-Start the built-in development server
+Start the built-in development server:
+
 ```
 php artisan serve
 ```
 
 ## Features
 
-- User authentication (register, login, logout)
-- CRUD functionality for blog posts
+- User authentication (register, login, and logout)
+- **CRUD** functionality for blog posts
 - Pagination for blog posts
 - Search functionality for blog posts
 - Admin panel to manage users and blog posts
